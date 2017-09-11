@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TestTask</string>
+    <string name="user_name">USER NAME:</string>
+    <string name="textview">TextView</string>
+    <string name="albums">ALBUMS</string>
+    <string name="posts">POSTS</string>
+    <string name="user_s_albums">USER\'S ALBUMS</string>
+    <string name="add_post">ADD POST</string>
+    <string name="title_of_post">Title of post</string>
+    <string name="your_post">Your Post</string>
+    <string name="user_s_posts">USER\'S POSTS</string>
+</resources>
