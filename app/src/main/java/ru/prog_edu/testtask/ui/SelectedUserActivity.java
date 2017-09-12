@@ -20,7 +20,7 @@ import ru.prog_edu.testtask.retrofit.api.ApiPostPosts;
 import ru.prog_edu.testtask.retrofit.api.RetroController;
 //активити для отображения в нем двух фрагментов в зависимости от положения свитч.
 public class SelectedUserActivity extends AppCompatActivity implements AlbumListFragment.OnSelectedItemListener_albums,
-        CompoundButton.OnCheckedChangeListener, FragmentDialog.DialogListener
+        CompoundButton.OnCheckedChangeListener, FragmentDialog.DialogListener, PostsListFragment.OnSelectedItemListener_posts
 {
 
     AlbumListFragment albumListFragment;//поля врагментов
@@ -113,5 +113,13 @@ public class SelectedUserActivity extends AppCompatActivity implements AlbumList
                 Toast.makeText(getApplicationContext(), "Very Bad", Toast.LENGTH_SHORT).show();// в случае неудачи отправляем соответствующее сообщение.
             }
         });
+    }
+
+    @Override
+    public void onItemSelectedPosts(int itemIndex) {
+        //передаем номер выбранного поста в новую активити.
+        Intent intent = new Intent(this, AllUserAlbumActivity.class);
+        intent.putExtra("selectedPosts", itemIndex);
+        startActivity(intent);
     }
 }
